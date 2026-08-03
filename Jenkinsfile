@@ -12,7 +12,9 @@ pipeline {
             }
         }
         stage('Test') {
-       
+            steps {
+                echo 'Running tests'
+            }
         }
         stage('Package') {
             steps {
