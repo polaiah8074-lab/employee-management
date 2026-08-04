@@ -1,16 +1,13 @@
 pipeline {
     agent any
-    parameters {
-        string (
-            name: 'VERSION',
-            defaultValue: '1.0.6',
-            description: 'App Version' 
-        )
+    environment {
+        PROJECT_NAME = "Employee Portal"
     }
+    
     stages {
-        stage('DisplayVersion') {
+        stage('ProjectName') {
             steps {
-                echo "Version : ${params.VERSION}"
+                echo "${PROJECT_NAME}"
             }
         }
     }
