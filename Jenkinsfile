@@ -1,29 +1,16 @@
 pipeline {
     agent any
+    parameters {
+        choice (
+            name: 'ENVIRONMENT',
+            choices: ['development','testing','production'],
+            description: 'choose environment' 
+        )
+    }
     stages {
-        stage('Welcome') {
+        stage('DisplayEnvironment') {
             steps {
-                echo 'Welcome to the Jenkins Pipeline'
-            }
-        }
-        stage('Build') {
-            steps {
-                echo 'Building the project'
-            }
-        }
-        stage('Test') {
-            steps {
-                echo 'Running tests'
-            }
-        }
-        stage('Package') {
-            steps {
-                echo 'Packaging the project'
-            }
-        }
-        stage('Finish') {
-            steps {
-                echo 'Pipeline execution completed'
+                echo "Select Environment : ${params.ENVIRONMENT}"
             }
         }
     }
