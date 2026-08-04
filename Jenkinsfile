@@ -8,9 +8,9 @@ pipeline {
         )
     }
     stages {
-        stage('DisplayEnvironment') {
+        stage('DisplayVersion') {
             steps {
-                echo "Select Environment : ${params.ENVIRONMENT}"
+                echo "Version : ${params.VERSION}"
             }
         }
     }
