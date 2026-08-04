@@ -7,7 +7,8 @@ pipeline {
     stages {
         stage('ProjectName') {
             steps {
-                echo "${PROJECT_NAME}"
+                echo "Project : ${PROJECT_NAME}"
+                echo "BUILD_NUMBER : ${BUILD_NUMBER}"
             }
         }
     }
