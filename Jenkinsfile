@@ -10,8 +10,8 @@ pipeline {
         }
     }
     post {
-        success {
-            archiveArtifacts artifacts: 'report.txt'
+        always {
+            echo "pipeline finished"
         }
     }
 }
