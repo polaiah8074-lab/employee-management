@@ -6,6 +6,9 @@ pipeline {
                 sh '''
                 echo "Build Successful" > report.txt
                 '''
+                sh '''
+                echo "Build stage 2 Successful" > report.txt
+                '''
             }
         }
         stage('Test Stage') {
