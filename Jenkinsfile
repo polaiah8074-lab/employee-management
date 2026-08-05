@@ -14,7 +14,7 @@ pipeline {
         stage('Test Stage') {
             steps {
                 sh '''
-                echo "Test Successful" > 
+                echo "Test Successful" > report.txt
                 '''
             }
         }
